@@ -21,9 +21,9 @@ vibes = [  "Start This Party",
           "Classics You Should Know"
 ]
 
-vibes.map! do |vibe|
-  Vibe.create(name: vibe)
-end
+# vibes.map! do |vibe|
+#   Vibe.create(name: vibe)
+# end
 
 genres = ["Pop",
           "Rock",
@@ -31,17 +31,17 @@ genres = ["Pop",
           "R&B",
           "Rap",
           "Alternative", #5
-          "Indie",
+          "Indie", #6
           "Broadway",
           "Hip Hop",
           "Blues",
-          "Soft Rock",
+          "Soft Rock", #10
           "Reggae",
           "Ska", #12
           "Country",
           "Soul",
           "Funk",
-          "Punk",
+          "Punk", #16
           "Disco",
           "New Wave",
           "Folk"
@@ -71,21 +71,40 @@ ramones = Artist.create(name: "The Ramones", img_url: "")
 backstreet = Artist.create(name: "Backstreet Boys", img_url: "")
 
 
-Song.create(name: "Love Fool", artist: cardigans, genre: genres[5], vibe: vibes[4])
-Song.create(name: "I'm Just A Girl", artist: gwen, genre: genre[12], vibe: vibes[9])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
-Song.create(name: "", artist: , genre: genre[], vibe: vibes[])
+song1 = Song.create(title: "Love Fool", artist: cardigans, genre: genres[5], )
+song1.vibes.create(name: vibes[4])
+
+song2 = Song.create(title: "I'm Just A Girl", artist: gwen, genre: genres[12])
+song2.vibes.create(name: vibes[9])
+
+song3 = Song.create(title: "Don't Stop Believing", artist: journey , genre: genres[10])
+song3.vibes.create(name: vibes[4])
+
+song4 = Song.create(title: "Blitzreig Pop", artist: ramones, genre: genres[16])
+song4.vibes.create(name: vibes[0])
+
+song5 = Song.create(title: "Backstreet's Back", artist: backstreet, genre: genres[0])
+song5.vibes.create(name: vibes[11])
+song5.vibes.create(name: vibes[0])
+
+
+# song6 = Song.create(title: "Baby Got Back", artist: sir, genre: genres[4])
+# song7 = Song.create(title: "Ain't No Mountain", artist: diana, genre: genres[17])
+# song8 = Song.create(title: "Living La Vida Loca", artist: ricky, genre: genres[2])
+# song9 = Song.create(title: "Chop Suey", artist: system_of, genre: genres[1])
+# song10 = Song.create(title: "I Will Follow You Into the Dark", artist: deathcab, genre: genres[6])
+# song11 = Song.create(title: "Hey Jude", artist: beatles, genre: genres[10])
+# song12 = Song.create(title: "One Dance", artist: drake, genre: genres[8])
+# song13 = Song.create(title: "Wonderwall", artist: oasis, genre: genres[5])
+# song14 = Song.create(title: "Don't Look Back In Anger", artist: oasis, genre: genres[5])
+# song15 = Song.create(title: "Girls Just Want To Have Fun", artist: cyndi, genre: genres[0])
+# song16 = Song.create(title: "Hot and Cold", artist: katy, genre: genres[0])
+# song17 = Song.create(title: "California Girls", artist: katy, genre: genres[0])
+# song18 = Song.create(title: "True Colors", artist: cyndi, genre: genres[10])
+# song19 = Song.create(title: "Love Story", artist: taylor, genre: genres[13])
+#
+# song20 = Song.create(title: "Shake It Out", artist: taylor, genre: genres[0])
+# song21 = Song.create(title: "Baby", artist: supremes, genre: genres[14])
+# song22 = Song.create(title: "Underneath It All", artist: gwen, genre: genres[12])
+# song23 = Song.create(title: "Stop In The Name of Love", artist: supremes, genre: genres[14])
+# song24 = Song.create(title: "Soul Meets Body", artist: deathcab, genre: genres[6])

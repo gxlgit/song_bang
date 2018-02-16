@@ -1,0 +1,13 @@
+
+<h1><%=@song.title%></h1>
+<img src="<%= @song.artist.img_url %>"/>
+<h2><%=@song.artist.name%></h2>
+<h4>Genre: <%=@song.genre.name%></h4>
+<h4>Song #:  <%=@song.num%></h4>
+
+<h4>Perfect for:</h4>
+<% @song.vibes.each do |vibe| %>
+  <div class="">
+    <%=vibe.name%></a>
+  </div>
+<% end %>
