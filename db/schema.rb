@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180216331523) do
     t.bigint "artist_id", null: false
     t.string "title", null: false
     t.integer "num"
+    t.integer "likes", default: 0
     t.bigint "genre_id"
     t.index ["artist_id"], name: "index_songs_on_artist_id"
     t.index ["genre_id"], name: "index_songs_on_genre_id"
