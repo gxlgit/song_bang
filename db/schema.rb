@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20180216331523) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name", null: false
+    t.string "down_name", null: false
     t.string "img_url"
   end
 

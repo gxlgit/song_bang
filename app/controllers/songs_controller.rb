@@ -35,11 +35,12 @@ class SongsController < ApplicationController
     # find Artist by Name
     # if artist exists ad that artist by id
     # else make a new id
-      @artist = Artist.find_by(name: params[:song][:artist])
+
+      @artist = Artist.find_by(down_name: params[:song][:artist].downcase)
       if @artist
         params[:song][:artist_id] = @artist.id
       else
-        params[:song][:artist_id] = Artist.create!(name: params[:song][:artist]).id
+        params[:song][:artist_id] = Artist.create!(name: params[:song][:artist], down_name: params[:song][:artist].downcase).id
       end
         @song = Song.create!(song_params)
 
