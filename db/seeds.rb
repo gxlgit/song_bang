@@ -21,9 +21,9 @@ vibes = [  "Start This Party",
           "Classics You Should Know"
 ]
 
-# vibes.map! do |vibe|
-#   Vibe.create(name: vibe)
-# end
+vibes.map! do |vibe|
+  Vibe.create(name: vibe)
+end
 
 genres = ["Pop",
           "Rock",
@@ -71,21 +71,21 @@ ramones = Artist.create(name: "The Ramones", img_url: "")
 backstreet = Artist.create(name: "Backstreet Boys", img_url: "")
 
 
-song1 = Song.create(title: "Love Fool", artist: cardigans, genre: genres[5], )
-song1.vibes.create(name: vibes[4])
+song1 = Song.create(title: "Love Fool", artist: cardigans, genre: genres[5])
+song1.vibes << vibes[4]
 
 song2 = Song.create(title: "I'm Just A Girl", artist: gwen, genre: genres[12])
-song2.vibes.create(name: vibes[9])
+song2.vibes << vibes[9]
 
 song3 = Song.create(title: "Don't Stop Believing", artist: journey , genre: genres[10])
-song3.vibes.create(name: vibes[4])
+song3.vibes << vibes[4]
 
 song4 = Song.create(title: "Blitzreig Pop", artist: ramones, genre: genres[16])
-song4.vibes.create(name: vibes[0])
+song4.vibes << vibes[0]
 
 song5 = Song.create(title: "Backstreet's Back", artist: backstreet, genre: genres[0])
-song5.vibes.create(name: vibes[11])
-song5.vibes.create(name: vibes[0])
+song5.vibes << vibes[11]
+song5.vibes << vibes[0]
 
 
 # song6 = Song.create(title: "Baby Got Back", artist: sir, genre: genres[4])
