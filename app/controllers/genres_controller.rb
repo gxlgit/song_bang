@@ -1,7 +1,7 @@
 class GenresController < ApplicationController
 
   def index
-    @genres = Genre.all.order(:name)
+    @genres = Genre.all.sort{|a,b| a.name.downcase <=> b.name.downcase }
   end
 
   def show

@@ -1,7 +1,8 @@
 class SongsController < ApplicationController
 
   def index
-    @songs = Song.all.order(:title)
+    # https://www.ruby-forum.com/topic/83451
+    @songs = Song.all.sort{|a,b| a.title.downcase <=> b.title.downcase }
   end
 
   def show
@@ -31,19 +32,31 @@ class SongsController < ApplicationController
   # end
 
   def create
-      @song = Song.create!(song_params)
+    # find Artist by Name
+    # if artist exists ad that artist by id
+    # else make a new id
+      @artist = Artist.find_by(name: params[:song][:artist])
+      if @artist
+        params[:song][:artist_id] = @artist.id
+      else
+        params[:song][:artist_id] = Artist.create!(name: params[:song][:artist]).id
+      end
+        @song = Song.create!(song_params)
 
 
-      puts 'VIBESVIBES!!!!!!!!!!!!!!!'
-      puts params[:title]
-      @vibe = Vibe.find('5')
-      # @vibes.each do |vibe|
-        puts @vibe.id
-        puts @vibe.name
-      # end
+      # puts 'VIBESVIBES!!!!!!!!!!!!!!!'
+      # puts params[:song][:vibe_ids]
+      # puts '-------------'
+      # # @vibe = Vibe.find('5')
+      # # @vibes.each do |vibe|
+      #   # puts @vibe.id
+      #   # puts @vibe.name
+      # # end
+
+
 
       # for now only allow one vibe to be selected
-      @song.vibes << Vibe.find('5')
+      @song.vibes << Vibe.find(params[:song][:vibe_ids])
       redirect_to song_path(@song)
   end
 

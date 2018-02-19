@@ -1,7 +1,7 @@
 class VibesController < ApplicationController
 
   def index
-    @vibes = Vibe.all.order(:name)
+    @vibes = Vibe.all.sort{|a,b| a.name.downcase <=> b.name.downcase }
   end
 
   def show
