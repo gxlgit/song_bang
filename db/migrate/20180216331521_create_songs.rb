@@ -7,7 +7,6 @@ class CreateSongs < ActiveRecord::Migration[5.1]
       t.integer :num
       t.integer :likes, default: 0
       t.references :genre,  foreign_key: true
-      # t.references :vibe, foreign_key: true
 
     end
   end
