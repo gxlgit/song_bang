@@ -1,4 +1,6 @@
-
+<nav>
+  <%= link_to "+ Song", new_song_path %>
+</nav>
 <% @songs.each do |song| %>
   <div class="">
     <a class= "" href="/songs/<%=song.id%>"><%=song.title%></a>

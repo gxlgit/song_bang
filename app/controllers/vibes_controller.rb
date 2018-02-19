@@ -1,7 +1,7 @@
 class VibesController < ApplicationController
 
   def index
-    @vibes = Vibe.all
+    @vibes = Vibe.all.order(:name)
   end
 
   def show
