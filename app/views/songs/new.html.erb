@@ -11,7 +11,28 @@
 
   <%= f.collection_select(:genre_id, Genre.all.order(:name), :id, :name ) %>
 
-  <%= f.collection_select(:vibe_ids, Vibe.all.order(:name), :id, :name ) %>
+  <!-- <%= f.collection_select(:vibe_ids, Vibe.all.order(:name), :id, :name ) %> -->
+</br>
+<!-- https://www.sitepoint.com/save-multiple-checkbox-values-database-rails/ -->
+
+<!-- <div class="field"> -->
+  <%= f.label "Add to a Vibe List" %><br />
+  <%= f.collection_check_boxes :vibe_ids, Vibe.all, :id, :name do |b| %>
+    <div class="collection-check-box">
+      <%= b.check_box %>
+      <%= b.label %>
+    </div>
+  <% end %>
+<!-- </div> -->
+
+    <!-- <%=Vibe.all.order(:name).each do |vibe| %>
+      <%= f.check_box( :vibe_ids, { multiple: true }, vibe.id, false )%>
+      <%= f.label vibe.name %>
+    </br>
+
+    <% end %> -->
+
+
 
 
   <%= f.submit "Add Song"%>

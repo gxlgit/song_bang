@@ -56,8 +56,10 @@ class SongsController < ApplicationController
 
 
 
-      # for now only allow one vibe to be selected
-      @song.vibes << Vibe.find(params[:song][:vibe_ids])
+      # first remove any blank selections
+      #then find those vibes and add them to the song 
+      the_vibes =params[:song][:vibe_ids].reject(&:blank?)
+      @song.vibes << Vibe.find(the_vibes)
       redirect_to song_path(@song)
   end
 
