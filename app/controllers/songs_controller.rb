@@ -7,12 +7,6 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    # puts 'VIBESVIBES!!!!!!!!!!!!!!!'
-    # @vibes = Vibe.all
-    # @song.vibes.each do |vibe|
-    #   puts vibe.id
-    #   puts vibe.name
-    # end
   end
 
 
@@ -20,27 +14,30 @@ class SongsController < ApplicationController
       @song = Song.new
   end
 
-  # def create
-  #   new_house_id = rand(1..4)
-  #   params[:student][:house_id] = new_house_id
-  #
-  #   # @student = Student.create!(name: params[:artist][:name],
-  #   #                         nationality: params[:artist][:nationality],
-  #   #                         photo_url: params[:artist][:photo_url])
-  #   @student = Student.create(student_params)
-  #   redirect_to student_path(@student)
-  # end
 
   def create
     # find Artist by Name
     # if artist exists ad that artist by id
     # else make a new id
+    params[:song][:title].strip!
+    if params[:song][:title] == ''
+      flash[:alert] = "Title Can Not Be Blank"
+      # redirect_to character_path(@character)
+      redirect_back(fallback_location: root_path) and return
+    end
 
-      @artist = Artist.find_by(down_name: params[:song][:artist].downcase)
+    artist_name = params[:song][:artist].strip
+    if artist_name == ''
+      flash[:alert] = "Artist Can Not Be Blank"
+      redirect_back(fallback_location: root_path) and return
+    end
+
+
+      @artist = Artist.find_by(down_name: artist_name.downcase)
       if @artist
         params[:song][:artist_id] = @artist.id
       else
-        params[:song][:artist_id] = Artist.create!(name: params[:song][:artist], down_name: params[:song][:artist].downcase).id
+        params[:song][:artist_id] = Artist.create!(name: artist_name, down_name: artist_name.downcase).id
       end
         @song = Song.create!(song_params)
 
@@ -57,7 +54,7 @@ class SongsController < ApplicationController
 
 
       # first remove any blank selections
-      #then find those vibes and add them to the song 
+      #then find those vibes and add them to the song
       the_vibes =params[:song][:vibe_ids].reject(&:blank?)
       @song.vibes << Vibe.find(the_vibes)
       redirect_to song_path(@song)
