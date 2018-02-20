@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
+
 //= require turbolinks
 
 
@@ -20,6 +20,9 @@
 // https://launchschool.com/blog/integrating-rails-and-bootstrap-part-1
 
 //= require jquery3
+//= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
+
+console.log('hellow world');

@@ -3,19 +3,39 @@
   <head>
     <title>SongBang</title>
     <%= csrf_meta_tags %>
-
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
   </head>
 
   <body>
-    <div class="container-fluid">
       <header>
-        <h1>SongBang!</h1>
-        <nav>
-          <%= link_to "Songs", songs_path %> | <%= link_to "Artists", artists_path%> | <%= link_to "Grooves",vibes_path%> | <%= link_to "Genres", genres_path%>
-        </nav>
+        <div id="header-banner" class="container-fluid" >
+            <h1>SongBang! </h1>
+        </div>
+
+        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+  <ul class="nav ">
+    <!-- <li class="active"><a href="#">Basic Topnav</a></li> -->
+    <li><%= link_to "Songs", songs_path %></li>
+                      <li><%= link_to "Artists", artists_path%></li>
+                      <li><%= link_to "Grooves",vibes_path%></li>
+                      <li><%= link_to "Genres", genres_path%></li>
+  </ul>
+</nav>
+
       </header>
+
+
+      <div class="container-fluid center-block">
+
       <main>
         <p class="notice info"><%= notice %></p>
         <p class="alert warning"><%= alert %></p>
