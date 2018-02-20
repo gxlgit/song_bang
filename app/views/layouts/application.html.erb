@@ -6,7 +6,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Damion|Fugaz+One|Gochi+Hand|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Damion|Fugaz+One|Gochi+Hand|Pacifico|Nanum+Gothic+Coding" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -20,15 +20,16 @@
   <body>
       <header>
         <!-- https://www.w3schools.com/bootstrap/bootstrap_get_started.asp -->
-        <div id="header-banner" class="container-fluid" >
+        <div id="header-banner" class="jumbotron container-fluid" >
             <h1 class="logo">SongBang! </h1>
+            <!-- <h3>For Norabang Lovers</h3> -->
         </div>
         <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="297">
           <a class="navbar-brand navbar-left logo" href="#">SongBang!</a>
           <ul class="nav nav-navbar nav-pills">
-            <li class="active"><%= link_to "Songs", songs_path %></li>
+            <li class=""><%= link_to "Songs", songs_path %></li>
             <li><%= link_to "Artists", artists_path%></li>
-            <li><%= link_to "Grooves",vibes_path%></li>
+            <li><%= link_to "Vibes",vibes_path%></li>
             <li><%= link_to "Genres", genres_path%></li>
           </ul>
           <form class="navbar-form navbar-right">
@@ -40,8 +41,8 @@
         </nav>
       </header>
 
-      <main  class="container-fluid center-block">
-        <p class="notice info"><%= notice %></p>
+      <main  class="container">
+        <!-- <p class="notice info"><%= notice %></p> -->
         <p class="alert warning"><%= alert %></p>
         <%= yield %>
       </main>

@@ -1,7 +1,15 @@
+<div class="index-view row">
 
-<h1>Find Your Groove</h1>
-<% @vibes.each do |vibe| %>
-  <div class="">
-    <a class= "" href="/vibes/<%=vibe.id%>"><%=vibe.name%></a>
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h1>	&#10036; Find Your Vibe	&#10036;</h1>
+    <% @vibes.each do |vibe| %>
+      <div class="">
+        <a class= "index-link" href="/vibes/<%=vibe.id%>"><%=vibe.name%></a>
+      </div>
+    <% end %>
+
   </div>
-<% end %>
+
+  <div class="col-md-2"></div>
+</div>

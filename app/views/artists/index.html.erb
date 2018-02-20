@@ -1,6 +1,16 @@
-<h1>Artists</h1>
-<% @artists.each do |artist| %>
-  <div class="">
-    <a class= "" href="/artists/<%=artist.id%>"><%=artist.name%></a>
+<div class="index-view row">
+
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h1>Artists</h1>
+
+    <% @artists.each do |artist| %>
+      <div class="">
+        <a class= "index-link" href="/artists/<%=artist.id%>"><%=artist.name%></a>
+      </div>
+    <% end %>
+
   </div>
-<% end %>
+
+  <div class="col-md-2"></div>
+</div>

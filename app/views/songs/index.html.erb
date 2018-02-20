@@ -1,8 +1,15 @@
-<nav>
-  <%= link_to "+ Song", new_song_path %>
-</nav>
-<% @songs.each do |song| %>
-  <div class="">
-    <a class= "" href="/songs/<%=song.id%>"><%=song.title%></a>
+<div class="index-view row">
+
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h1>Songs <button class="btn btn-default" type="submit"><%= link_to "+ Song", new_song_path %></button></h1>
+
+    <% @songs.each do |song| %>
+      <div class="">
+        <a class= "index-link" href="/songs/<%=song.id%>"><%=song.title%></a>
+      </div>
+    <% end %>
   </div>
-<% end %>
+
+  <div class="col-md-2"></div>
+</div>

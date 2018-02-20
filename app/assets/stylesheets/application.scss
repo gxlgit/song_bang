@@ -8,7 +8,12 @@
 // }}
 
 body {
-  background-color: #ecdef9 !important;
+  background-color: #032e72 !important;
+  font-family: 'Nanum Gothic Coding', monospace !important;
+}
+h1, h2, h3, h4, h5,h6{
+  color: white !important;
+
 }
 
 // .navbar-default .navbar-toggle {
@@ -16,7 +21,7 @@ body {
 // }
 // #navigation,.navbar .navbar-default
 .logo{
-  font-family: Pacifico, sans-serif;
+  font-family: 'Pacifico', cursive;
 
 }
 
@@ -30,10 +35,15 @@ body {
 
   text-align: center;
 }
+.jumbotron{
+  margin: 0 !important;
+}
+
 #header-banner h1{
   color: white;
-  text-shadow: 3px 3px 5px purple;
-  font-size:10em !important;
+  text-shadow: 3px 3px 5px blue;
+  font-size:8vw !important;
+  // margin: 50px auto;
 }
 .affix {
       top: 0;
@@ -48,3 +58,28 @@ body {
 .affix + .container-fluid {
       padding-top: 70px;
   }
+
+.nav {
+  font-size: 1.5vw;
+}
+
+.alert {
+  color: red;
+  font-size: 2vw;
+}
+
+.index-view h1{
+  text-align: center;
+}
+.index-link {
+  color: white !important;
+  font-size: 1.5vw;
+}
+
+.btn {
+  box-shadow: 2px 2px 2px;
+}
+
+main {
+  // margin-left:
+}
