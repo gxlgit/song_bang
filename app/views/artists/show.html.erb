@@ -1,8 +1,15 @@
+<div class="show-view row">
 
-<h1><%=@artist.name%></h1>
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h1><%=@artist.name%></h1>
 
-<% @songs.each do |song| %>
-  <div class="">
-    <%=song.title%></a>
+    <% @songs.each do |song| %>
+      <div class="show-info">
+        <%=song.title%></a>
+      </div>
+    <% end %>
   </div>
-<% end %>
+
+  <div class="col-md-2"></div>
+</div>

@@ -1,15 +1,23 @@
+<div class="show-view row">
 
-<h1><%=@song.title%></h1>
-<img src="<%= @song.artist.img_url %>"/>
-<h2><%=@song.artist.name%></h2>
-<h4>Genre: <%=@song.genre.name%></h4>
-<h4>Song #:  <%=@song.num%></h4>
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h1><%=@song.title%></h1>
+    <img src="<%= @song.artist.img_url %>"/>
+    <h2><%=@song.artist.name%></h2>
+    <h4>Genre: <%=@song.genre.name%></h4>
+    <h4>Noraebang #:  <%=@song.num%></h4>
 
-<h4>Perfect for:</h4>
-<% @song.vibes.each do |vibe| %>
-  <div class="">
-    <%=vibe.name%></a>
+    <h4>The perfect song to:</h4>
+    <% @song.vibes.each do |vibe| %>
+      <div class="show-info">
+        <%=vibe.name%></a>
+      </div>
+    <% end %>
+    <h4>Likes: <%=@song.likes%></h4>
+    <button class="btn btn-default" type="submit">Like!</button>
+
   </div>
-<% end %>
 
-<h4>Likes: <%=@song.likes%></h4>
+  <div class="col-md-2"></div>
+</div>

@@ -71,7 +71,10 @@ h1, h2, h3, h4, h5,h6{
 .index-view h1{
   text-align: center;
 }
-.index-link {
+.show-view h1{
+  text-align: center;
+}
+.index-link, .show-info {
   color: white !important;
   font-size: 1.5vw;
 }
