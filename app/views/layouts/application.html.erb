@@ -9,14 +9,18 @@
   </head>
 
   <body>
-    <header>
-      <h1>SongBang!</h1>
-      <nav>
-        <%= link_to "Songs", songs_path %> | <%= link_to "Artists", artists_path%> | <%= link_to "Grooves",vibes_path%> | <%= link_to "Genres", genres_path%>
-      </nav>
-    </header>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container-fluid">
+      <header>
+        <h1>SongBang!</h1>
+        <nav>
+          <%= link_to "Songs", songs_path %> | <%= link_to "Artists", artists_path%> | <%= link_to "Grooves",vibes_path%> | <%= link_to "Genres", genres_path%>
+        </nav>
+      </header>
+      <main>
+        <p class="notice info"><%= notice %></p>
+        <p class="alert warning"><%= alert %></p>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

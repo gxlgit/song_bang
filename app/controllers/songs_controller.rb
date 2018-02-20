@@ -22,7 +22,6 @@ class SongsController < ApplicationController
     params[:song][:title].strip!
     if params[:song][:title] == ''
       flash[:alert] = "Title Can Not Be Blank"
-      # redirect_to character_path(@character)
       redirect_back(fallback_location: root_path) and return
     end
 

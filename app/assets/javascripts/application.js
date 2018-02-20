@@ -12,4 +12,14 @@
 //
 //= require rails-ujs
 //= require turbolinks
+
+
+
+//BOOTSTRAP stuff
+// https://github.com/twbs/bootstrap-rubygem/blob/master/README.md
+// https://launchschool.com/blog/integrating-rails-and-bootstrap-part-1
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require_tree .
