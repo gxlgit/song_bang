@@ -1,9 +1,26 @@
 class SongsController < ApplicationController
+  helper_method :sort_column, :sort_direction
 
   def index
     # https://www.ruby-forum.com/topic/83451
-    @songs = Song.all.sort{|a,b| a.title.downcase <=> b.title.downcase }
+    if sort_column == 'title'
+      if sort_direction == 'asc'
+        @songs = Song.all.sort{|a,b| a.title.downcase <=> b.title.downcase }
+      else
+        @songs = Song.all.sort{|a,b| b.title.downcase <=> a.title.downcase }
+      end
+    elsif sort_column == 'artist'
+      if sort_direction == 'asc'
+        @songs = Song.all.sort{|a,b| a.artist.name.downcase <=> b.artist.name.downcase }
+      else
+        @songs = Song.all.sort{|a,b| b.artist.name.downcase <=> a.artist.name.downcase }
+      end
+    else
+      @songs = Song.all.order("#{sort_column} #{sort_direction}")
+    end
+
   end
+
 
   def show
     @song = Song.find(params[:id])
@@ -58,5 +75,17 @@ class SongsController < ApplicationController
   private
     def song_params
       params.require(:song).permit(:title, :num, :genre_id, :artist_id)
+    end
+
+    def sortable_columns
+      ["title", "artist", "num", "likes"]
+    end
+
+    def sort_column
+      sortable_columns.include?(params[:column]) ? params[:column] : "title"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

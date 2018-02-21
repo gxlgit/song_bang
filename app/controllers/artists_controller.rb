@@ -10,8 +10,8 @@ class ArtistsController < ApplicationController
 
   def show
     @artist = Artist.find(params[:id])
-    puts 'SORTING'
-    puts "#{sort_column} #{sort_direction}"
+
+    # https://richonrails.com/articles/sortable-table-columns
     if sort_column == 'title'
       if sort_direction == 'asc'
         @songs = @artist.songs.sort{|a,b| a.title.downcase <=> b.title.downcase }

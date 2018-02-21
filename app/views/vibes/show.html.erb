@@ -5,9 +5,9 @@
     <h1>&#10036; <%=@vibe.name%>  &#10036;</h1>
     <table class= "table table-striped">
       <tr>
-        <th>Song Name</th>
-        <th>Noraebang #</th>
-        <th>Likes</th>
+        <th><%= sort_link "title", "Song Title" %></th>
+        <th><%= sort_link "num", "Noraebang #" %></th>
+        <th><%= sort_link "likes", "Likes" %></th>
       </tr>
 
       <% @songs.each do |song| %>
@@ -19,7 +19,7 @@
 
       <% end %>
     </table>
-  
+
   </div>
 
   <div class="col-md-2"></div>

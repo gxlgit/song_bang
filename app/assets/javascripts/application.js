@@ -24,6 +24,7 @@
 //= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
+
 //= require_tree .
 
-console.log('hellow world');
+// console.log('hellow world');

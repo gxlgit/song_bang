@@ -22,13 +22,10 @@
     <table class= "table table-striped">
 
       <tr>
-        <th><%= sort_link "title" %></th>
-        <th><%= sort_link "num" %></th>
-        <th><%= sort_link "likes" %></th>
+        <th><%= sort_link "title", "Song Title" %></th>
+        <th><%= sort_link "num", "Noraebang #" %></th>
+        <th><%= sort_link "likes", "Likes" %></th>
 
-        <!-- <th>Song Name</th>
-        <th>Noraebang #</th>
-        <th>Likes</th> -->
       </tr>
 
       <% @songs.each do |song| %>
