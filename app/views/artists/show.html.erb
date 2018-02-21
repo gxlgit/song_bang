@@ -1,4 +1,4 @@
-<div class="show-view row">
+<!-- <div class="show-view row">
 
   <div class="col-md-2"></div>
   <div class="col-md-8">
@@ -9,6 +9,33 @@
         <%=song.title%></a>
       </div>
     <% end %>
+  </div>
+
+  <div class="col-md-2"></div>
+</div> -->
+
+<div class="show-view row">
+
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h1>&#10036; <%=@artist.name%> &#10036;</h1>
+    <table class= "table table-striped">
+      <tr>
+        <th>Song Name</th>
+        <th>Noraebang #</th>
+        <th>Likes</th>
+      </tr>
+
+      <% @songs.each do |song| %>
+      <tr>
+        <td><%=song.title%></td>
+        <td><%=song.num%></td>
+        <td><%=song.likes%></td>
+      </tr>
+
+      <% end %>
+    </table>
+    
   </div>
 
   <div class="col-md-2"></div>

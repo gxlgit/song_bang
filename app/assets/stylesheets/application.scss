@@ -75,14 +75,21 @@ h1, h2, h3, h4, h5,h6{
   text-align: center;
 }
 .index-link, .show-info {
-  color: white !important;
-  font-size: 1.5vw;
+  color: #024082 !important;
+  // font-size: 1.25vw;
 }
 
 .btn {
   box-shadow: 2px 2px 2px;
 }
 
+.table{
+  background-color: #ddc7e2;
+  color: white;
+}
+.table-striped{
+  color:black;
+}
 main {
   // margin-left:
 }

@@ -3,12 +3,26 @@
   <div class="col-md-2"></div>
   <div class="col-md-8">
     <h1>&#10036; Songs  &#10036; <button class="btn btn-default" type="submit"><%= link_to "+ Song", new_song_path %></button></h1>
+    <table class= "table table-striped">
+      <tr>
+        <th>Song Name</th>
+        <th>Artist</th>
+        <th>Noraebang #</th>
+        <th>Likes</th>
+      </tr>
 
-    <% @songs.each do |song| %>
-      <div class="">
-        <a class= "index-link" href="/songs/<%=song.id%>"><%=song.title%></a>
-      </div>
-    <% end %>
+      <% @songs.each do |song| %>
+      <tr>
+        <td><a class= "index-link" href="/songs/<%=song.id%>"><%=song.title%></a></td>
+        <td><%=song.artist.name%></td>
+        <td><%=song.num%></td>
+        <td><%=song.likes%></td>
+      </tr>
+
+      <% end %>
+    </table>
+
+
   </div>
 
   <div class="col-md-2"></div>
