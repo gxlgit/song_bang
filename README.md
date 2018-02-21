@@ -1,7 +1,10 @@
-# README
+# SongBang! an app for noraebang lovers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Noraebang is 
+
+[SongBang on Heroku](https://songbang.herokuapp.com/)
+
+
 
 Things you may want to cover:
 
@@ -20,5 +23,6 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+[Instructions to Deploy on Heroku](https://devcenter.heroku.com/articles/getting-started-with-rails5)
 
 * ...
