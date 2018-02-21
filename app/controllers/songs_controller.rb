@@ -40,18 +40,6 @@ class SongsController < ApplicationController
       end
         @song = Song.create!(song_params)
 
-
-      # puts 'VIBESVIBES!!!!!!!!!!!!!!!'
-      # puts params[:song][:vibe_ids]
-      # puts '-------------'
-      # # @vibe = Vibe.find('5')
-      # # @vibes.each do |vibe|
-      #   # puts @vibe.id
-      #   # puts @vibe.name
-      # # end
-
-
-
       # first remove any blank selections
       #then find those vibes and add them to the song
       the_vibes =params[:song][:vibe_ids].reject(&:blank?)
@@ -59,9 +47,12 @@ class SongsController < ApplicationController
       redirect_to song_path(@song)
   end
 
-  def likePost
-    puts 'liked'
+  def liked
+    @song = Song.find(params[:id])
     # function to increase and record a like on a song
+    @song.increment(:likes)
+    @song.save
+    redirect_to song_path(@song)
   end
 
   private

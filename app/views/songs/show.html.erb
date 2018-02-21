@@ -8,14 +8,21 @@
     <h4>Genre: <%=@song.genre.name%></h4>
     <h4>Noraebang #:  <%=@song.num%></h4>
 
-    <h4>The perfect song to:</h4>
+    <h4>The perfect song for:</h4>
     <% @song.vibes.each do |vibe| %>
       <div class="show-info">
         <%=vibe.name%></a>
       </div>
     <% end %>
     <h4>Likes: <%=@song.likes%></h4>
-    <button class="btn btn-default" type="submit">Like!</button>
+    <!-- Both of these methods do the same thing! -->
+    <!-- <%= form_for @song, method: :patch do |f| %>
+      <%= f.submit "Like!", class: 'btn btn-default'%>
+    <% end %> -->
+    <button class="btn btn-default" type="submit">
+      <%= link_to "Like!", liked_song_path(@song), method: :patch %>
+    </button>
+
 
   </div>
 

@@ -5,8 +5,11 @@
     <%= csrf_meta_tags %>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Damion|Fugaz+One|Gochi+Hand|Pacifico|Nanum+Gothic+Coding" rel="stylesheet">
+    <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-eval' => false %>
+
+    <link href="https://fonts.googleapis.com/css?family=Damion|Fugaz+One|Gochi+Hand|Pacifico
+      |Nanum+Gothic+Coding" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 

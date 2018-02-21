@@ -11,7 +11,6 @@
 // about supported directives.
 //
 
-//= require turbolinks
 
 
 
@@ -19,10 +18,13 @@
 // https://github.com/twbs/bootstrap-rubygem/blob/master/README.md
 // https://launchschool.com/blog/integrating-rails-and-bootstrap-part-1
 
+
 //= require jquery3
+
 //= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
+//= require turbolinks
 //= require_tree .
 
 console.log('hellow world');
