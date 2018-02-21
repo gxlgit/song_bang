@@ -6,7 +6,7 @@
   <%= f.label :artist %>
   <%= f.text_field :artist%>
 
-  <%= f.label :num %>
+  <%= f.label 'Noraebang #' %>
   <%= f.text_field :num%>
 
   <%= f.collection_select(:genre_id, Genre.all.order(:name), :id, :name ) %>
@@ -16,7 +16,8 @@
 <!-- https://www.sitepoint.com/save-multiple-checkbox-values-database-rails/ -->
 
 <!-- <div class="field"> -->
-  <%= f.label "Add to a Vibe List" %><br />
+
+  <h3><%= f.label "This Song is Perfect For:" %><br /> </h3>
   <%= f.collection_check_boxes :vibe_ids, Vibe.all, :id, :name do |b| %>
     <div class="collection-check-box">
       <%= b.check_box %>
@@ -32,8 +33,5 @@
 
     <% end %> -->
 
-
-
-
-  <%= f.submit "Add Song", class: 'btn btn-success'%>
+  <%= f.submit "Add Song", class: 'btn btn-default'%>
 <% end %>
