@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :vibes, only: [:index, :show]
   resources :artists, only: [:index, :show]
   resources :genres, only: [:index, :show]
-
+  get '/about' => 'about#index'
 end
