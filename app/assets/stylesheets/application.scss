@@ -68,12 +68,58 @@ h1, h2, h3, h4, h5,h6{
   font-size: 2vw;
 }
 
+.song-title{
+  font-family: 'Pacifico', cursive;
+  text-shadow: 3px 3px 5px rgb(197,78,157);
+  font-size: 4vw;
+}
+.artist-title a {
+  font-family: 'Pacifico', cursive;
+  text-shadow: 3px 3px 5px rgb(197,78,157);
+}
+
 .index-view {
   text-align: center;
 }
 .show-view {
   text-align: center;
 }
+.like-btn{
+  box-shadow: white !important;
+  background-color: #5c38f9 !important;
+  box-shadow: 1px 1px 3px white !important;
+  border: none !important;
+}
+.like-btn a{
+  text-decoration: none !important;
+ font-family: 'Pacifico', cursive;
+}
+.vibe-btn{
+   background-color: rgb(197,78,157) !important;
+   box-shadow: 1px 1px 3px white !important;
+   border: none !important;
+   padding: 5px;
+   margin: 5px;
+}
+.vibe-btn a{
+  text-decoration: none !important;
+
+}
+
+.show-view a {
+  color: white;
+}
+
+.song-aside {
+  margin: 60px auto;
+  padding: 15px;
+  width: auto;
+  //display makes it size to largest tag inside
+  display:inline-block;
+  border: 1px solid white !important;
+  border-radius: 5%;
+}
+
 .table  a{
   color: #024082 !important;
 
@@ -93,6 +139,8 @@ h1, h2, h3, h4, h5,h6{
   font-size: 1.5vw;
 
 }
+
+
 .table{
   background-color: #ddc7e2;
   color: white;
