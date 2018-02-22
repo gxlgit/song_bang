@@ -2,15 +2,15 @@
 
   <div class="col-md-3"></div>
   <div class="col-md-6">
-    <h1 class="song-title"> &#10036; <%=@song.title%> &#10036;</h1>
+    <h1 class="main-title"> &#10036; <%=@song.title%> &#10036;</h1>
     <!-- <img src="<%= @song.artist.img_url %>"/> -->
-    <h2 class="artist-title">by <%= link_to @song.artist.name, artist_path(@song.artist)%></h2>
+    <h2 class="sub-title">by <%= link_to @song.artist.name, artist_path(@song.artist)%></h2>
 
-    <h4>Genre: <%= link_to @song.genre.name, genre_path(@song.genre)%></h4>
-    <h4>Noraebang #:  <%=@song.num%></h4>
+    <h4><span class = "info-title">Genre:</span> <%= link_to @song.genre.name, genre_path(@song.genre)%></h4>
+    <h4><span class = "info-title">Noraebang #:</span>  <%=@song.num%></h4>
 
 
-    <h4>Likes: <%=@song.likes%>  <button class="btn btn-default like-btn" type="submit">
+    <h4><span class = "info-title">Likes:</span> <%=@song.likes%>  <button class="btn btn-default like-btn" type="submit">
       <%= link_to "Like!👍", liked_song_path(@song), method: :patch %>
     </button></h4>
     <!-- Both of these methods do the same thing! -->
@@ -26,6 +26,7 @@
     <div class="song-aside">
 
     <h4>The perfect song for:</h4>
+    <!-- FIX IT eventually add logic not to show if htere are no vibes -->
     <% @song.vibes.each do |vibe| %>
       <!-- <div class="show-info"> -->
       <button class="btn btn-default vibe-btn" type="submit">

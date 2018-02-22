@@ -68,14 +68,22 @@ h1, h2, h3, h4, h5,h6{
   font-size: 2vw;
 }
 
-.song-title{
+.main-title{
   font-family: 'Pacifico', cursive;
   text-shadow: 3px 3px 5px rgb(197,78,157);
   font-size: 4vw;
 }
-.artist-title a {
+.sub-title a {
   font-family: 'Pacifico', cursive;
   text-shadow: 3px 3px 5px rgb(197,78,157);
+}
+
+.info-title{
+  color: #86d3f9 !important;
+}
+
+.table-title{
+  padding-bottom: 35px;
 }
 
 .index-view {
