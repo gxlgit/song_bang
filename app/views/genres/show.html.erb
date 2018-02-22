@@ -5,15 +5,17 @@
     <h1>&#10036; <%=@genre.name%> &#10036;</h1>
     <table class= "table table-striped">
       <tr>
+
         <th><%= sort_link "title", "Song Title" %></th>
         <th><%= sort_link "num", "Noraebang #" %></th>
         <th><%= sort_link "likes", "Likes" %></th>
-      
+
       </tr>
 
       <% @songs.each do |song| %>
       <tr>
-        <td><%=song.title%></td>
+        <td><a class= "" href="/songs/<%=song.id%>"><%=song.title%></a></td>
+
         <td><%=song.num%></td>
         <td><%=song.likes%></td>
       </tr>

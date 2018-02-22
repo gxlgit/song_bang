@@ -12,7 +12,9 @@
 
       <% @songs.each do |song| %>
       <tr>
-        <td><%=song.title%></td>
+
+        <td><a class= "" href="/songs/<%=song.id%>"><%=song.title%></a></td>
+
         <td><%=song.num%></td>
         <td><%=song.likes%></td>
       </tr>

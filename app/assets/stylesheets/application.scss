@@ -68,14 +68,15 @@ h1, h2, h3, h4, h5,h6{
   font-size: 2vw;
 }
 
-.index-view h1{
+.index-view {
   text-align: center;
 }
-.show-view h1{
+.show-view {
   text-align: center;
 }
 .table  a{
   color: #024082 !important;
+
   // font-size: 1.25vw;
 }
 .index-link {
@@ -95,6 +96,7 @@ h1, h2, h3, h4, h5,h6{
 .table{
   background-color: #ddc7e2;
   color: white;
+    text-align: left;
 }
 .table-striped{
   color:black;

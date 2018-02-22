@@ -4,14 +4,15 @@
   <div class="col-md-8">
     <h1> &#10036; <%=@song.title%> &#10036;</h1>
     <img src="<%= @song.artist.img_url %>"/>
-    <h2><%=@song.artist.name%></h2>
-    <h4>Genre: <%=@song.genre.name%></h4>
+    <h2>by <%= link_to @song.artist.name, artist_path(@song.artist)%></h2>
+
+    <h4>Genre: <%= link_to @song.genre.name, genre_path(@song.genre)%></h4>
     <h4>Noraebang #:  <%=@song.num%></h4>
 
     <h4>The perfect song for:</h4>
     <% @song.vibes.each do |vibe| %>
       <div class="show-info">
-        <%=vibe.name%></a>
+        <%= link_to vibe.name, vibe_path(vibe)%>
       </div>
     <% end %>
     <h4>Likes: <%=@song.likes%></h4>
@@ -20,7 +21,7 @@
       <%= f.submit "Like!", class: 'btn btn-default'%>
     <% end %> -->
     <button class="btn btn-default" type="submit">
-      <%= link_to "Like!", liked_song_path(@song), method: :patch %>
+      <%= link_to "Like!👍", liked_song_path(@song), method: :patch %>
     </button>
 
 

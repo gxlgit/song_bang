@@ -14,7 +14,7 @@
       <% @songs.each do |song| %>
       <tr>
         <td><a class= "" href="/songs/<%=song.id%>"><%=song.title%></a></td>
-        <td><%=song.artist.name%></td>
+        <td><%= link_to song.artist.name, artist_path(song.artist)%></td>
         <td><%=song.num%></td>
         <td><%=song.likes%></td>
       </tr>
