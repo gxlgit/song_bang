@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :artists, only: [:index, :show]
   resources :genres, only: [:index, :show]
   get '/about' => 'about#index'
+  get '/search' => 'search#index'
 end

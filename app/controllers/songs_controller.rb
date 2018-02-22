@@ -77,6 +77,9 @@ class SongsController < ApplicationController
       params.require(:song).permit(:title, :num, :genre_id, :artist_id)
     end
 
+    # def search_params
+    #   params.require(:)
+
     def sortable_columns
       ["title", "artist", "num", "likes"]
     end
