@@ -36,13 +36,13 @@ class SongsController < ApplicationController
     # find Artist by Name
     # if artist exists ad that artist by id
     # else make a new id
-    params[:song][:title].strip!
+    params[:song][:title] = params[:song][:title].strip.downcase.titleize
     if params[:song][:title] == ''
       flash[:alert] = "Title Can Not Be Blank"
       redirect_back(fallback_location: root_path) and return
     end
 
-    artist_name = params[:song][:artist].strip
+    artist_name = params[:song][:artist].strip.titleize
     if artist_name == ''
       flash[:alert] = "Artist Can Not Be Blank"
       redirect_back(fallback_location: root_path) and return
