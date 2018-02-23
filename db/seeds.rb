@@ -19,7 +19,7 @@ vibes = [  "Start This Party",
           "So Emo",
           "Best Air Guitar Solos", #13
           "Classics You Should Know",
-          "Pants Off Dance Off" #14,
+          "Pants Off Dance Off", #14
           "Girl Power",
           "Oldies But Goodies"
 ]
