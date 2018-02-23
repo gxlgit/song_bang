@@ -19,9 +19,9 @@ vibes = [  "Start This Party",
           "So Emo",
           "Best Air Guitar Solos", #13
           "Classics You Should Know",
-          "Pants Off Dance Off", #14
+          "Pants Off Dance Off", #15
           "Girl Power",
-          "Oldies But Goodies"
+          "Oldies But Goodies" #17
 ]
 
 vibes.map! do |vibe|
@@ -67,7 +67,7 @@ beatles = Artist.create(name: "The Beatles", down_name: "the beatles",img_url: "
 taylor = Artist.create(name: "Taylor Swift", down_name: "taylor swift",img_url: "")
 deathcab = Artist.create(name: "Death Cab For Cutie", down_name: "death cab for cutie",img_url: "")
 ricky = Artist.create(name: "Ricky Martin", down_name: "ricky martin",img_url: "")
-system_Of = Artist.create(name: "System of a Down", down_name: "system of a down",img_url: "")
+system_of = Artist.create(name: "System of a Down", down_name: "system of a down",img_url: "")
 diana = Artist.create(name: "Diana Ross", down_name: "diana ross",img_url: "")
 supremes = Artist.create(name: "The Supremes", down_name: "the supremes",img_url: "")
 ramones = Artist.create(name: "The Ramones", down_name: "the ramones",img_url: "")
@@ -76,12 +76,16 @@ thirdeye = Artist.create(name: "Third Eye Blind", down_name: "thirdeye blind",im
 
 song1 = Song.create(title: "Love Fool", num: 20786, artist: cardigans, genre: genres[5])
 song1.vibes << vibes[4]
+song1.vibes << vibes[9]
+
 
 song2 = Song.create(title: "I'm Just A Girl", num: 60938, artist: gwen, genre: genres[12])
 song2.vibes << vibes[9]
 
 song3 = Song.create(title: "Don't Stop Believin", num: 60905, artist: journey , genre: genres[10])
 song3.vibes << vibes[4]
+song3.vibes << vibes[2]
+
 
 song4 = Song.create(title: "Blitzreig Pop", num: 60696, artist: ramones, genre: genres[16])
 song4.vibes << vibes[0]
@@ -110,7 +114,7 @@ song10.vibes << vibes[3]
 song10.vibes << vibes[1]
 
 song11 = Song.create(title: "Hey Jude", num: 21325, artist: beatles, genre: genres[10])
-song11.vibes << vibes[13]
+song11.vibes << vibes[14]
 song11.vibes << vibes[3]
 
 song12 = Song.create(title: "What's My Name?", num: 84860, artist: drake, genre: genres[8])
@@ -131,7 +135,7 @@ song15 = Song.create(title: "Girls Just Want To Have Fun", num: 8074, artist: cy
 song15.vibes << vibes[0]
 song15.vibes << vibes[8]
 song15.vibes << vibes[15]
-song5.vibes << vibes[4]
+song15.vibes << vibes[4]
 
 song16 = Song.create(title: "Hot N Cold", num: 22575, artist: katy, genre: genres[0])
 song16.vibes << vibes[11]
@@ -146,7 +150,7 @@ song18.vibes << vibes[3]
 
 song19 = Song.create(title: "Love Story", num: 22608, artist: taylor, genre: genres[13])
 song19.vibes << vibes[1]
-song19.vibes << vibes[15]
+song19.vibes << vibes[16]
 
 song20 = Song.create(title: "Shake It Off", num: 74694, artist: taylor, genre: genres[0])
 song20.vibes << vibes[0]
