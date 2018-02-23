@@ -91,7 +91,7 @@ song5.vibes << vibes[11]
 song5.vibes << vibes[0]
 
 
-song6 = Song.create(title: "Baby Got Back", num: , artist: sir, genre: genres[4])
+song6 = Song.create(title: "Baby Got Back",  artist: sir, genre: genres[4])
 song6.vibes << vibes[5]
 song6.vibes << vibes[10]
 
@@ -153,7 +153,7 @@ song20.vibes << vibes[0]
 song20.vibes << vibes[14]
 song20.vibes << vibes[15]
 
-song21 = Song.create(title: "Baby Love", num: , artist: supremes, genre: genres[14])
+song21 = Song.create(title: "Baby Love", num: 61205, artist: supremes, genre: genres[14])
 song21.vibes << vibes[14]
 song21.vibes << vibes[1]
 
@@ -165,7 +165,7 @@ song23.vibes << vibes[1]
 song23.vibes << vibes[4]
 song23.vibes << vibes[16]
 
-song24 = Song.create(title: "Soul Meets Body", num: , artist: deathcab, genre: genres[6])
+song24 = Song.create(title: "Soul Meets Body", artist: deathcab, genre: genres[6])
 song24.vibes << vibes[1]
 song24.vibes << vibes[2]
 
