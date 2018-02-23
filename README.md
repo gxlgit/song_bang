@@ -1,8 +1,9 @@
-# SongBang! an app for noraebang lovers
+# [Songbang!](https://songbang.herokuapp.com/) an app for *noraebang* lovers
+![Songbang! Screenshot](https://github.com/gxlgit/song_bang/blob/master/Songbang%20Screenshot.png "SongBang! Screenshot")
 
-Songbang! is an app for Korean noraebang lovers. The Korean word noraebang literally means song room and is a place to go sing karaoke privately with just your friends.
+Songbang! is an app for Korean ~noraebang~ lovers. The Korean word *noraebang* literally means song room and is a place to go sing karaoke privately with just your friends.
 
-Having a hard time at noraebang finding the number for the song you want to sing? Songbang! has user sourced information to make singing a breeze. Look for you favorite song by title, artist, genre, or vibe. Don't see the song you're looking for? If you find it, please add it to the collection.
+Having a hard time at *noraebang* finding the number for the song you want to sing? Songbang! has user sourced information to make singing a breeze. Look for you favorite song by title, artist, genre, or vibe. Don't see the song you're looking for? If you find it, please add it to the collection.
 
 [SongBang on Heroku](https://songbang.herokuapp.com/)
 
